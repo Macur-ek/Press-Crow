@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press [Crow] to Crow</title>
+    <style>
+        * {
+            background-color: grey;
+        }
+        container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            width: 50%;
+            height: auto;
+            
+        }
+    </style>
+</head>
+<body>
+<container>
+<img src="./image1.png" alt="Crow" onclick="PressCrow()">
+</container>
+<audio src="./sound.mp3" id="audioPlayer"></audio>
+
+    <script>
+        function PressCrow() {
+            const audio = document.getElementById('audioPlayer');
+            if (audio.paused) {
+                audio.play();
+            }else {
+                audio.paused();
+                audio.currentTime = 0;
+            }
+        }   
+    </script>
+
+</body>
+</body>
+</html>
